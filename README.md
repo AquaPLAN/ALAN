@@ -32,9 +32,9 @@ GetAlanTiles.py /path/to/output --regions Oceania PacRim --months 03 10
 
 Before running this script you should update the settings in the following files:
  * ``alan_tools/config.py`` - In particular checking that the input file paths point to data that is available on your system (you can alternatively override these settings with arguments passed to script).
- * ``alan_tools/file_attributes.py`` - This file contains the meta data to be stored in the output files. Update the attributes as needed, paying particulary attention to the publication date and contact details attributes. You can add/remove attribute, noting that the placeholders (`XXXX_PLACEHOLDER`) need to be kept in place for the code to run successfully. 
+ * ``alan_tools/file_attributes.py`` - This file contains the metadata to be stored in the output files. Update the attributes as needed, paying particulary attention to the publication date and contact details attributes. You can add/remove attributes, noting that the placeholders (`XXXX_PLACEHOLDER`) need to be kept in place for the code to run successfully. 
 
-You may override the input file paths by providing them as arguments to the GetAlanTiles script, e.g.
+You may override the input file paths by providing them as arguments to the `GetAlanTiles.py` script, e.g.
 ```
    GetAlanTiles.py /path/to/output \
        --kd_dir  /path/to/kd_data_dir \
@@ -44,9 +44,9 @@ You may override the input file paths by providing them as arguments to the GetA
 ```
 
 Note that the code assumes specific formats for the input files:
- * Kd data expected in NetCDF format,
- * The Falchi data expected in GeoTIFF format,
- * The landmask expected in Zarr file storage format.
+ * Kd data expected in NetCDF format (`.nc`),
+ * Falchi data expected in GeoTIFF format (`.tif`),
+ * Landmask expected in Zarr file storage format (`.zarr`).
 
 
 
